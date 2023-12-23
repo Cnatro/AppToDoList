@@ -1,0 +1,73 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f5f5f5;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* task head */
+#todo-list{
+    background-color: #1E272E;
+    padding: 23px 30px 30px 30px;
+}
+#todo-list .task-head{
+    display: flex;
+    justify-content: space-between;
+    width: 482px;
+}
+#todo-list .task-head input#task{
+    padding:10px 10px 10px 0 ;
+    outline: none;
+    border: none;
+    color: #FF6F6F;
+    border-bottom: 1px solid #FF6F6F;
+    background-color: transparent;
+    flex-grow: 0.95;
+    font-size: 1.2rem;
+}
+#todo-list .task-head input::placeholder{
+    color: #FF6F6F;
+}
+#todo-list .task-head button{
+    background-color: #FF2B2B;
+    cursor: pointer;
+    color:#FFFFFF;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+}
+/* task body */
+ul.tasks{
+    list-style: none;
+    padding: 27px 0;
+    margin: 0;
+}
+ul.tasks > li.task-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 2px solid #5C5C5C;
+    transition: .4s;
+    cursor: pointer;
+}
+li.task-item .task-action > .fa:first-child{
+    padding-right: .5rem;
+}
+li.task-item .task-action > .fa {
+    color: #A4A4A4;
+    font-size: 1.2rem;
+}
+li.task-item:hover .task-action > .fa{
+    color:#FFFFFF;
+}
+li.task-item[is-complete ="true"] span{
+    text-decoration: line-through;
+    color: #6D6C6C;
+}
+/* task result */
+span#task-result{
+    font-style: italic;
+    font-size: 1rem;
+    color: #828282;
+}
